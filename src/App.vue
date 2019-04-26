@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// 手动放置到node_modules里去的, 需要package
 import SButton from 'sim-ui-pack/SButton'
 import 'sim-ui-pack/SButton/style.css'
 
