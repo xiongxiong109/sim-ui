@@ -9,7 +9,6 @@ module.exports = merge(baseConfig, {
     path: path.resolve(__dirname, '..', 'src', 'baseEntry.js')
   },
   output: {
-    path: path.resolve(__dirname, '..', 'dist'),
     filename: 'main.js',
     libraryTarget: 'umd',
     globalObject: 'this'

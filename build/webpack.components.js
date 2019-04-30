@@ -9,7 +9,6 @@ const components = require('../component.json');
 module.exports = merge(baseConfig, {
   entry: components,
   output: {
-    path: path.resolve(__dirname, '..', 'dist'),
     filename: '[name]/index.js',
     libraryTarget: 'commonjs2'
   },
