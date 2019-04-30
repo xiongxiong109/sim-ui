@@ -1,6 +1,7 @@
 {
   "name": "sim-ui",
   "version": "0.1.0",
+  "main": "package/main.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
