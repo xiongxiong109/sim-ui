@@ -1,0 +1,10 @@
+/* 过渡class */
+
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: .3s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

@@ -1,4 +1,3 @@
 {
-  "SButton": "./src/components/SButton/index.js",
   "Switch": "./src/components/Switch/index.js"
 }

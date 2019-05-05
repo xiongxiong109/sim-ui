@@ -2,8 +2,21 @@
 
 import './styles';
 
-import SButton from './components/SButton'
+// base components
+import Switch from './components/Switch'
+
+// directives
+import transformDOM from './directives/transformDom'
+
+// 插件形式注册
+const SimUI = {
+  install(Vue) {
+    Vue.directive('trans-dom', transformDOM);
+  }
+}
+
+export default SimUI
 
 export {
-  SButton
+  Switch
 }

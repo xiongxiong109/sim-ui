@@ -15,7 +15,8 @@ export default {
   data() {
     return {
       navs: [
-        { to: '/simple_select', 'nm': '选择、步进器、计数器' }
+        { to: '/simple_select', 'nm': '选择、步进器、计数器' },
+        { to: '/modal_components', 'nm': '弹出层组件' }
       ]
     }
   }

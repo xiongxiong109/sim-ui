@@ -15,14 +15,11 @@ export default new Router({
       path: '/simple_select',
       name: 'simple_select',
       component: () => import(/* webpackChunkName: "simple_select" */ './views/SimpleSelect.vue')
+    },
+    {
+      path: '/modal_components',
+      name: 'modal_components',
+      component: () => import(/* webpackChunkName: "modal_components" */ './views/ModalComponents.vue')
     }
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (about.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    // }
   ]
 })
