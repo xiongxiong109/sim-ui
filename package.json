@@ -9,7 +9,8 @@
     "build:components": "webpack --config ./build/webpack.components.js",
     "build:demo": "vue-cli-service build",
     "build:main": "webpack --config ./build/webpack.main.js",
-    "build": "npm run build:components && npm run build:main"
+    "build": "npm run build:components && npm run build:main",
+    "doc": "docsify serve ./docs"
   },
   "dependencies": {
     "core-js": "^2.6.5",

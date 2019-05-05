@@ -2,7 +2,7 @@
   <div class="home">
     <h4 class="title">Simple-UI-Components</h4>
     <ul class="list">
-      <li v-for="item in navs">
+      <li v-for="item in navs" :key="item.to">
         <router-link :to="item.to" :key="item.to">{{item.nm}}</router-link>
       </li>
     </ul>
