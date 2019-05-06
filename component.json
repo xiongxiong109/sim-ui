@@ -1,3 +1,4 @@
 {
-  "Switch": "./src/components/Switch/index.js"
+  "Switch": "./src/components/Switch/index.js",
+  "Modal": "./src/components/Modal/index.js"
 }

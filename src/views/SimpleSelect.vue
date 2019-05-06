@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+// import Switch from 'sim-ui-pack/Switch'
 import Switch from '@/components/Switch'
 
 export default {

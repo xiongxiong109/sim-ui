@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import SimUI from './baseEntry'
+// import 'sim-ui-pack/main.css'
+// import SimUI from 'sim-ui-pack'
 import App from './App.vue'
 
 import router from './router'

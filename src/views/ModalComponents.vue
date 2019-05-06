@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+// import Modal from 'sim-ui-pack/Modal'
 import Modal from '@/components/Modal'
 
 export default {

@@ -4,6 +4,7 @@ import './styles';
 
 // base components
 import Switch from './components/Switch'
+import Modal from './components/Modal'
 
 // directives
 import transformDOM from './directives/transformDom'
@@ -20,5 +21,6 @@ const SimUI = {
 export default SimUI
 
 export {
-  Switch
+  Switch,
+  Modal
 }

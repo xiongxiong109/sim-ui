@@ -1,0 +1,16 @@
+{
+  "name": "sim-ui-pack",
+  "version": "1.0.0",
+  "description": "sim-ui",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "mobile",
+    "components"
+  ],
+  "author": "xiongxiong109",
+  "license": "ISC"
+}
