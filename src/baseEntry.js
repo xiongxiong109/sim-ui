@@ -7,11 +7,13 @@ import Switch from './components/Switch'
 
 // directives
 import transformDOM from './directives/transformDom'
+import clickoutside from './directives/clickoutside'
 
 // 插件形式注册
 const SimUI = {
   install(Vue) {
     Vue.directive('trans-dom', transformDOM);
+    Vue.directive('click-outside', clickoutside);
   }
 }
 

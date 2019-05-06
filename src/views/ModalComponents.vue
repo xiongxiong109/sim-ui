@@ -2,7 +2,10 @@
   <div>
     <p>Modal</p>
     <button @click="isShowModal = !isShowModal">Toggle Modal</button>
-    <sm-modal :is-show="isShowModal">
+    <sm-modal
+      :is-show="isShowModal"
+      @hide="isShowModal = false"
+    >
       <p>Modal content</p>
     </sm-modal>
   </div>

@@ -9,12 +9,14 @@
       :style="{
         'background-color': bgColor
       }"
-      v-if="isShow"
+      v-if="isFirstMount"
+      v-show="isShow"
       v-trans-dom
     >
       <div
         class="sm-modal__container"
         :class="className"
+        v-click-outside="onClickOutSide"
       >
         <slot></slot>
       </div>
@@ -37,6 +39,10 @@ export default {
     className: {
       type: String,
       default: ''
+    },
+    clickModalHide: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
@@ -44,12 +50,31 @@ export default {
       return `rgba(0,0,0, ${this.opacity})`
     }
   },
+  data() {
+    return {
+      // 仅仅在第一次show的时候挂载dom, 后面只通过v-show控制显示隐藏
+      isFirstMount: this.isShow
+    }
+  },
+  created() {
+    if (!this.isFirstMount) {
+      this.unwatch = this.$watch('isShow', newV => {
+        if (newV) {
+          this.isFirstMount = newV;
+          this.unwatch();
+        }
+      })
+    }
+  },
   methods: {
     afterEnter() {
-      console.log('entered')
+      this.$emit('entered')
     },
     afterLeave() {
-      console.log('leaved')
+      this.$emit('entered')
+    },
+    onClickOutSide() {
+      this.clickModalHide && this.$emit('hide');
     }
   }
 }
