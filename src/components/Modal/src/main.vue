@@ -1,27 +1,32 @@
 <template>
-  <transition
+  <transition-group
     name="fade"
     @after-enter="afterEnter"
     @after-leave="afterLeave"
   >
     <div
       class="sm-modal"
+      key="modal-mask"
       :style="{
         'background-color': bgColor
       }"
       v-if="isFirstMount"
       v-show="isShow"
       v-trans-dom
+      @click="evtClickModal"
     >
-      <div
+    </div>
+    <div
         class="sm-modal__container"
         :class="className"
-        v-click-outside="onClickOutSide"
+        key="modal-content"
+        v-if="isFirstMount"
+        v-show="isShow"
+        v-trans-dom
       >
         <slot></slot>
       </div>
-    </div>
-  </transition>
+  </transition-group>
 </template>
 <script>
 // 蒙层组件
@@ -73,7 +78,8 @@ export default {
     afterLeave() {
       this.$emit('entered')
     },
-    onClickOutSide() {
+    // 点击蒙层区域
+    evtClickModal() {
       this.clickModalHide && this.$emit('hide');
     }
   }
@@ -87,6 +93,12 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  .sm-modal__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2001;
     color: #fff;
   }
 </style>
