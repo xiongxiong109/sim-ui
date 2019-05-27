@@ -1,0 +1,11 @@
+.sm-sheet__wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.sm-sheet__container {
+  height: 150px;
+  background-color: #fff;
+  color: #333;
+}

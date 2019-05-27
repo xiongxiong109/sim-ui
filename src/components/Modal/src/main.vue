@@ -1,6 +1,8 @@
 <template>
   <transition-group
     name="fade"
+    appear
+    @enter="$emit('enter')"
     @after-enter="afterEnter"
     @after-leave="afterLeave"
   >
@@ -18,7 +20,7 @@
     </div>
     <div
         class="sm-modal__container"
-        :class="className"
+        :class="wrapperClass"
         key="modal-content"
         v-if="isFirstMount"
         v-show="isShow"
@@ -41,7 +43,7 @@ export default {
       type: Number,
       default: .6
     },
-    className: {
+    wrapperClass: {
       type: String,
       default: ''
     },
@@ -76,7 +78,7 @@ export default {
       this.$emit('entered')
     },
     afterLeave() {
-      this.$emit('entered')
+      this.$emit('leaved')
     },
     // 点击蒙层区域
     evtClickModal() {
@@ -96,9 +98,6 @@ export default {
   }
   .sm-modal__container {
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: 2001;
-    color: #fff;
   }
 </style>
