@@ -1,34 +1,7 @@
 考虑到移动端文件体积问题, **目前只提供按需加载的组件引入方式**, 所以务必要提前配置好`babel-plugin-import`插件
 
 组件列表如下:
-## Switch ##
-> 开关组件, 仿IOS原生Switch
 
-使用示例:
+[actionsheet](./components/actionsheet.md ':include')
 
-```javascript
-<template>
-	<sm-switch v-model="isOpen"></sm-switch>
-</template>
-<script>
-	import { Switch } from 'sim-ui';
-
-	export default {
-		data() {
-			return {
-				isOpen: false
-			}
-		},
-		components: {
-			[Switch.name]: Switch
-		}
-	}
-</script>
-```
-
-属性:
-
-|    名字	 |    类型 	 |   默认值	 | 说明 								    |
-|:----------:|:---------:|:---------:|:------------------------------------:|
-| value  	 | `boolean` | `false`   | 通过`v-model`双向绑定，同步更新状态 	    |
-| isDisabled | `boolean` | `false`	 | 是否禁止点击						    |
+[switch](./components/switch.md ':include')
