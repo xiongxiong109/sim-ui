@@ -1,32 +1,26 @@
-组件基本分为**基础组件**与**高级组件**, 基础组件会全量加载, 而高级组件需要单独按需引入。
+考虑到移动端文件体积问题, **目前只提供按需加载的组件引入方式**, 所以务必要提前配置好`babel-plugin-import`插件
 
-# 基础组件 #
-
-引入方式:
-```javascript
-	import Vue from 'vue'
-	import SimUI from 'sim-ui' // 引入基础核心模块
-	import 'sim-ui/dist/main.css' // 引入主要css文件
-	
-	Vue.use(SimUI); // 安装sim-ui
-```
-
-列表如下:
+组件列表如下:
 ## Switch ##
 > 开关组件, 仿IOS原生Switch
 
 使用示例:
 
-```
+```javascript
 <template>
 	<sm-switch v-model="isOpen"></sm-switch>
 </template>
 <script>
+	import { Switch } from 'sim-ui';
+
 	export default {
 		data() {
 			return {
 				isOpen: false
 			}
+		},
+		components: {
+			[Switch.name]: Switch
 		}
 	}
 </script>
