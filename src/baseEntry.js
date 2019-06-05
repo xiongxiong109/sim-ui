@@ -2,8 +2,16 @@
 
 import './styles';
 
-import SButton from './components/SButton'
+// directives
+import transformDOM from './directives/transformDom'
+import clickoutside from './directives/clickoutside'
 
-export {
-  SButton
+// 插件形式注册
+const SimUI = {
+  install(Vue) {
+    Vue.directive('trans-dom', transformDOM);
+    Vue.directive('click-outside', clickoutside);
+  }
 }
+
+export default SimUI

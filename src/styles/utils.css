@@ -1,0 +1,18 @@
+/* 工具类样式 */
+
+/* flex center */
+.sm-u-fxc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 文本溢出隐藏 */
+.sm-u-ellips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 点击反馈 */
+.sm-act-btn:active {
+  background-color: #eee;
+}

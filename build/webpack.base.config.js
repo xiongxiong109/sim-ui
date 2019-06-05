@@ -35,11 +35,14 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin()
   ],
-  externals: {
-    vue: {
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      root: 'Vue'
+  externals: [
+    /core-js/,
+    {
+      vue: {
+        commonjs: 'vue',
+        commonjs2: 'vue',
+        root: 'Vue'
+      }
     }
-  }
+  ]
 }

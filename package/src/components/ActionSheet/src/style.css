@@ -1,0 +1,14 @@
+.sm-sheet__wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.sm-sheet__container {
+  background-color: #fff;
+  color: #333;
+}
+.sm-actionsheet-list li {
+  height: 44px;
+  padding: 0 8px;
+}
