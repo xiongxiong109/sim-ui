@@ -1,5 +1,4 @@
 // 打包组件webpack
-const path = require('path');
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.config')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
