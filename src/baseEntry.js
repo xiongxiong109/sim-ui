@@ -2,10 +2,6 @@
 
 import './styles';
 
-// base components
-import Switch from './components/Switch'
-import Modal from './components/Modal'
-
 // directives
 import transformDOM from './directives/transformDom'
 import clickoutside from './directives/clickoutside'
@@ -19,8 +15,3 @@ const SimUI = {
 }
 
 export default SimUI
-
-export {
-  Switch,
-  Modal
-}

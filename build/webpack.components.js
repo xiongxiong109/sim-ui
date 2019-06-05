@@ -9,12 +9,12 @@ const components = require('../component.json');
 module.exports = merge(baseConfig, {
   entry: components,
   output: {
-    filename: '[name]/index.js',
+    filename: 'dist/[name]/index.js',
     libraryTarget: 'commonjs2'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name]/style.css'
+      filename: 'dist/[name]/style.css'
     }),
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
