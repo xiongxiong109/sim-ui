@@ -12,8 +12,11 @@
     <button @click="evtShowActionSheet">show actionSheet</button>
     <sm-actionsheet
       :is-show="isShowAction"
+      :list="actionList"
+      @click-item="evtClickActionItem"
       @hide="isShowAction = false"
     />
+    {{curSelect}}
   </div>
 </template>
 <script>
@@ -25,12 +28,21 @@ export default {
   data() {
     return {
       isShowModal: false,
-      isShowAction: false
+      isShowAction: false,
+      curSelect: {},
+      actionList: [
+        { id: 'ok', nm: 'OK' },
+        { id: 'cancel', nm: 'Cancel' }
+      ]
     }
   },
   methods: {
     evtShowActionSheet() {
       this.isShowAction = true;
+    },
+    evtClickActionItem(item) {
+      this.curSelect = item;
+      this.isShowAction = false;
     }
   },
   components: {

@@ -5,7 +5,10 @@
   bottom: 0;
 }
 .sm-sheet__container {
-  height: 150px;
   background-color: #fff;
   color: #333;
+}
+.sm-actionsheet-list li {
+  height: 44px;
+  padding: 0 8px;
 }

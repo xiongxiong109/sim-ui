@@ -10,17 +10,21 @@
       appear
       @after-leave="isShowModal = false"
     >
-		  <div
+      <div
         class="sm-sheet__container"
         v-show="isShowPanel"
       >
-        <p>Hello</p>
+        <action-list
+          :list="list"
+          @click-item="$listeners['click-item']"
+        />
       </div>
-	  </transition>
+    </transition>
   </sm-modal>
 </template>
 <script>
   import Modal from '../../Modal';
+  import ItemList from './ItemList';
 
 	export default {
 		name: 'sm-actionsheet',
@@ -28,6 +32,9 @@
       isShow: {
         type: Boolean,
         default: false
+      },
+      list: {
+        type: Array
       }
     },
     data() {
@@ -59,7 +66,8 @@
       }
     },
     components: {
-      [Modal.name]: Modal
+      [Modal.name]: Modal,
+      'action-list': ItemList
     }
 	}
 </script>
