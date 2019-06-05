@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/xiongxiong109/sim-ui.svg?branch=master)](https://travis-ci.org/xiongxiong109/sim-ui)
 # sim-ui
 
 ## Project setup
