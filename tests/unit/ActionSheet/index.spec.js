@@ -14,7 +14,6 @@ describe('ActionSheet', () => {
   it('render itemLists', () => {
 
     const wrapper = mount(Page)
-    const actionSheet = wrapper.find(ActionSheet);
     const list = wrapper.find(ItemList);
 
     list.find('li').trigger('click');
