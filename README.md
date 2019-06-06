@@ -1,7 +1,7 @@
 # sim-ui
 
 [![Build Status](https://travis-ci.org/xiongxiong109/sim-ui.svg?branch=master)](https://travis-ci.org/xiongxiong109/sim-ui)
-
+[![Coverage Status](https://coveralls.io/repos/github/xiongxiong109/sim-ui/badge.svg)](https://coveralls.io/github/xiongxiong109/sim-ui)
 ## Project setup
 ```
 npm install
