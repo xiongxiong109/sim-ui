@@ -17,4 +17,4 @@ branches:
     - master
 # coveralls
 after_success:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - npm run test:unit && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
