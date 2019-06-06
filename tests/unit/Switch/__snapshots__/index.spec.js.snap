@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component 正常状态下点击, v-model控制双向数据变化 1`] = `
+<div
+  class="sm-switch__wrapper is-open"
+/>
+`;
+
+exports[`Switch Component 禁用状态下点击无效 1`] = `
+<div
+  class="sm-switch__wrapper"
+/>
+`;
