@@ -16,7 +16,5 @@ branches:
   only:
     - master
 # coveralls
-jobs:
-  include: Produce Coverage
-  node_js: node
-  script: npm run test:unit && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+after_success:
+  - npm run test:unit && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
