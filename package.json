@@ -11,7 +11,8 @@
     "build:dynamic": "node ./build/packSourceFiles.js",
     "build:main": "webpack --config ./build/webpack.main.js",
     "doc": "docsify serve ./docs",
-    "test:unit": "vue-cli-service test:unit --coverage"
+    "test:unit": "vue-cli-service test:unit",
+    "coverall": "vue-cli-service test:unit --coverage"
   },
   "main": "package/main.js",
   "dependencies": {
