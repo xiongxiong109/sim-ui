@@ -52,4 +52,12 @@ describe('蒙层组件', () => {
     expect(wrapper.emitted('hide')).toBeFalsy();
 
   })
+
+  it('cover all', () => {
+    const wrapper = mount(Modal);
+    wrapper.vm.afterEnter();
+    expect(wrapper.emitted('entered')).toBeTruthy();
+    wrapper.vm.afterLeave();
+    expect(wrapper.emitted('leaved')).toBeTruthy();
+  })
 })

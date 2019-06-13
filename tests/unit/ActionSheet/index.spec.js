@@ -27,4 +27,46 @@ describe('ActionSheet', () => {
 
   })
 
+  it('动画交互顺序测试', () => {
+    const wrapper = mount(ActionSheet);
+
+    expect(wrapper.vm.isShowModal).toEqual(wrapper.props().isShow);
+
+    // 打开dom
+    wrapper.setProps({ isShow: true });
+    // 先显示蒙层
+    expect(wrapper.vm.isShowModal).toBe(true);
+    expect(wrapper.vm.isShowPanel).toBe(false);
+
+    // 再显示isShowPanel
+    setTimeout(() => {
+      expect(wrapper.vm.isShowPanel).toBe(true);
+    }, 300);
+
+  })
+
+  it('交互顺序测试', () => {
+    const wrapper = mount(Page);
+    const actionWrapper = wrapper.find(ActionSheet);
+
+    wrapper.setData({ isShow: true });
+
+    // 关闭dom
+    wrapper.setData({ isShow: false });
+
+    // 再关闭蒙层
+    setTimeout(() => {
+      expect(actionWrapper.emitted('hide')).toBeTruthy();
+      expect(actionWrapper.vm.isShowModal).toBe(false);
+    }, 300);
+  })
+
+  it('cover all', () => {
+    const wrapper = mount(ActionSheet);
+    wrapper.vm.onEntering();
+    expect(wrapper.vm.isShowPanel).toBe(true);
+    wrapper.vm.evtHide();
+    expect(wrapper.emitted('hide')).toBeTruthy();
+  })
+
 })
